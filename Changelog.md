@@ -3,7 +3,7 @@
 ## Upcoming Release
 
 
-**Improved** accessing neptune using assume role
+- **Improved** accessing neptune using assume role
   ([#818](https://github.com/aws/graph-explorer/pull/818))
 - **Improved** reliability of schema syncing, retrying on failure
   ([#813](https://github.com/aws/graph-explorer/pull/813))
