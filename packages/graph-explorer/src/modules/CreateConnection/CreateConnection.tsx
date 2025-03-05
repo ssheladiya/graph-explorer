@@ -325,6 +325,17 @@ const CreateConnection = ({
               />
             </div>
             <div className="input-url">
+              <Select
+                label="Service Type"
+                options={[
+                  { label: "Neptune DB", value: "neptune-db" },
+                  { label: "Neptune Analytics", value: "neptune-graph" },
+                ]}
+                value={form.serviceType}
+                onChange={onFormChange("serviceType")}
+              />
+            </div>
+            <div className="input-url">
               <Input
                 data-autofocus={true}
                 label={
@@ -344,17 +355,6 @@ const CreateConnection = ({
                 onChange={onFormChange("awsAssumeRoleArn")}
                 placeholder="arn:aws:iam::aws-account-no:role/role-name"
                 errorMessage="Invalid ARN"
-              />
-            </div>
-            <div className="input-url">
-              <Select
-                label="Service Type"
-                options={[
-                  { label: "Neptune DB", value: "neptune-db" },
-                  { label: "Neptune Analytics", value: "neptune-graph" },
-                ]}
-                value={form.serviceType}
-                onChange={onFormChange("serviceType")}
               />
             </div>
           </>
